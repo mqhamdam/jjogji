@@ -2,6 +2,9 @@
 
 [![Codemagic build status](https://api.codemagic.io/apps/6468b090834e7248f637ef57/6468b090834e7248f637ef56/status_badge.svg)](https://codemagic.io/apps/6468b090834e7248f637ef57/6468b090834e7248f637ef56/latest_build)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
+
+
 A new Flutter project.
 
 ## Getting Started
