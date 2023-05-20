@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: codecov/codecov-action@v3
+    - uses: dart-lang/setup-dart@v1
+    - uses: invertase/github-action-dart-analyzer@v1
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
