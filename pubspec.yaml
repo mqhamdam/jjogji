@@ -1,0 +1,182 @@
+name: jjogji
+description: The "Jjogji" is MVP(Minimum Viable Product) Serverless SNS (Social Networking Service) application platform that offers users the ability to create, share, like, and comment on text-based content. The application provides a wide range of features that allow users to customize their experience.Users can make their publications public, private, or special, and have the option to disable or enable comments for each specific publication. The application also offers various engagement features. Users can interact with each other on the platform by following or adding others as besties. This creates a personalized network of contacts and allows users to easily connect and share content with each other. Application offers translating post to many popular languages, and Text-To-Speech feature. Overall, the "Jjogji" platform provides a user-friendly interface for individuals to connect, share, and engage with others. The application's customizable features allow users to tailor their experience to their liking and the platform's serverless architecture provides a reliable and efficient service
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^10.4.0
+  fluttericon: ^2.0.0
+  introduction_screen: ^3.1.8
+  timeline_tile: ^2.0.0
+  flutter_polygon: ^0.3.0+2
+  timelines: ^0.1.0
+  google_fonts: ^4.0.3
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  cupertino_icons: ^1.0.2
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.0
+  dartz: ^0.10.1
+  http: ^0.13.5
+  flutter_isolate: ^2.0.4
+  persistent_bottom_nav_bar: ^5.0.2
+  share_plus: ^7.0.0
+  flutter_local_notifications: ^13.0.0
+  another_flushbar: ^1.12.29
+  flutter_svg: ^2.0.5
+  lottie: ^2.3.2
+  shimmer: ^2.0.0
+  overlay_support: ^2.1.0
+  connectivity_plus: ^3.0.4
+  sliver_tools: ^0.2.9
+  shared_preferences: ^2.1.0
+  flutter_keyboard_visibility: ^5.4.0
+  flutter_app_badger: ^1.5.0
+  badges: ^3.1.1
+  flutter_slidable: ^3.0.0
+  flutter_tts: ^3.6.3
+  auto_size_text: ^3.0.0
+  translator: ^0.1.7
+  flutter_translate: ^4.0.3
+  country_icons: ^2.0.2
+  country_codes: ^2.2.0
+  animated_text_kit: ^4.2.2
+  # Firebase packages
+  firebase_auth: ^4.2.5
+  firebase_core: ^2.4.1
+  firebase_messaging: ^14.2.1
+  firebase_analytics: ^10.1.0
+  firebase_crashlytics: ^3.0.9
+  firebase_performance: ^0.9.0+9
+  firebase_app_check: ^0.1.1+8
+  cloud_firestore: ^4.3.1
+  cloud_functions: ^4.0.7
+  firebase_storage: ^11.2.1
+  #
+  uuid: ^3.0.7
+  cached_network_image: ^3.2.3
+  flutter_colorpicker: ^1.0.3
+  animated_theme_switcher: ^2.0.8
+  url_launcher: ^6.1.10
+  loading_animation_widget: ^1.2.0+4
+  marquee: ^2.2.3
+  animate_do: ^3.0.2
+  fluttertoast: ^8.2.1
+  flutter_fgbg: ^0.2.2
+  # draggable_float_widget: ^0.0.2
+  # floating_draggable_widget: ^2.1.2
+  # floating_overlay: ^1.2.1
+  local_auth: ^2.1.6
+  intl: ^0.17.0
+  image_picker: ^0.8.7+4
+  animations: ^2.0.7
+  flutter_cache_manager: ^3.3.0
+  flutter_native_splash: ^2.2.19
+  device_info_plus: ^9.0.0
+  internet_connection_checker: ^1.0.0+1
+  vibration: ^1.7.7
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # flutter_lints: ^2.0.0
+  build_runner: 2.3.3
+  freezed: 2.3.2
+  json_serializable: 6.6.1
+  flutter_launcher_icons: ^0.13.1
+  lint: ^2.0.1
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/
+    - assets/images/
+    - assets/images/avatar/
+    - assets/images/background/
+    - assets/images/badge/
+    - assets/lottie/
+    - assets/i18n/
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+flutter_native_splash:
+  # color: "#0e2f44"
+  # color_dark: "#0e2f44"
+  # image_dark: 'assets/splash.png'
+  # image: 'assets/splash.png'
+
+  background_image_dark: 'assets/splash.png'
+  background_image: 'assets/splash.png'
+  fullscreen: true
+android12:
+  background_image_dark: 'assets/splash.png'
+  background_image: 'assets/splash.png'
+  fullscreen: true
