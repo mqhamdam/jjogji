@@ -4,5 +4,6 @@
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 [![Test, Build and Release apk](https://github.com/mqhamdam/jjogji/actions/workflows/main.yml/badge.svg)](https://github.com/mqhamdam/jjogji/actions/workflows/main.yml)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/mqhamdam/jjogji)
+![GitHub](https://img.shields.io/github/license/mqhamdam/jjogji?style=plastic)
 
 #### To be complited soon...
