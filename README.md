@@ -12,5 +12,17 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/mqhamdam/jjogji/total?style=plastic)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/mqhamdam/jjogji?label=Hits)
 ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/mqhamdam/jjogji)
+![GitHub top language](https://img.shields.io/github/languages/top/mqhamdam/jjogji)
+![GitHub language count](https://img.shields.io/github/languages/count/mqhamdam/jjogji)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mqhamdam/jjogji)
+![GitHub watchers](https://img.shields.io/github/watchers/mqhamdam/jjogji?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/mqhamdam/jjogji?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mqhamdam/jjogji?style=social)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/mqhamdam?style=social)
+
+#About
+![App Banner](/README_ASSETS/play_store_feature_graphic.png "App Banner").
+
+
 
 #### To be complited soon...

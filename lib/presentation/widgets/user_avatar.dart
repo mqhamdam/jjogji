@@ -117,10 +117,12 @@ class TrianglePolygon extends StatelessWidget with Polygon {
   factory TrianglePolygon.regular({
     List<Color>? colors,
     double? radialGradius,
+    NetworkImageURL? imageUrl,
   }) {
     return TrianglePolygon(
       70,
       colors: colors,
+      imageUrl: imageUrl,
       radialGradius: radialGradius,
     );
   }

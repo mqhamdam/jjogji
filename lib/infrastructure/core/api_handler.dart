@@ -51,12 +51,14 @@ class ApiHandler implements IUserRepo, IPostRepo {
 
   Future<dynamic> _handlePatchRequest(Uri uri, dynamic body) async {
     final header = await _setHeaders();
+    debugPrint("uri: $uri\nbody: $body\nheader: $header");
     final res = http.patch(
       uri,
       body: jsonEncode(body),
       headers: header,
     );
     final json = await res;
+
     return jsonDecode(json.body);
   }
 
@@ -244,6 +246,7 @@ class ApiHandler implements IUserRepo, IPostRepo {
   @override
   Future<Either<Error, Unit>> likePost(UUID uuid) async {
     final postuuid = uuid.getOrCrash();
+
     final uri = Uri.parse("$baseApi/posts/$postuuid/likes");
     final res = await _handlePatchRequest(uri, {});
     return right(unit);
@@ -604,11 +607,9 @@ class ApiHandler implements IUserRepo, IPostRepo {
       background: Colors.transparent,
     );
 
-    avatarRef.putFile(f).snapshotEvents.listen((event) {
-      if (event.state == TaskState.success) {
-        o.dismiss();
-      }
-    });
+    await avatarRef.putFile(f);
+
+    o.dismiss();
 
     final String avatarUrl = await avatarRef.getDownloadURL();
     return avatarUrl;
@@ -633,11 +634,8 @@ class ApiHandler implements IUserRepo, IPostRepo {
       background: Colors.transparent,
     );
 
-    backgroundRef.putFile(f).snapshotEvents.listen((taskSnapshot) {
-      if (taskSnapshot.state == TaskState.success) {
-        o.dismiss();
-      }
-    });
+    await backgroundRef.putFile(f);
+    o.dismiss();
     final String backgroundUrl = await backgroundRef.getDownloadURL();
     return backgroundUrl;
   }

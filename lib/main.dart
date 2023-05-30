@@ -2,6 +2,7 @@
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:country_codes/country_codes.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -54,10 +55,14 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseAppCheck.instance.activate(
+    androidProvider: AndroidProvider.debug,
+  );
 
   final FirebaseMessaging messaging = FirebaseMessaging.instance;
-  messaging.requestPermission(
+  await messaging.requestPermission(
     criticalAlert: true,
+    provisional: true,
   );
 
   /// Listen to Background messages (also listen when app is terminated)
@@ -103,8 +108,8 @@ class MyApp extends StatelessWidget {
                 ),
             ),
             BlocProvider(
-              create: (context) =>
-                  AppNotificationsBloc()..add(const AppNotificationsEvent.init()),
+              create: (context) => AppNotificationsBloc()
+                ..add(const AppNotificationsEvent.init()),
             ),
             BlocProvider(
               create: (context) => PersNavBarBloc(),

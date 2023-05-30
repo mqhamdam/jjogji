@@ -78,17 +78,15 @@ class _PersNavBarBaseState extends State<PersNavBarBase> {
 
   @override
   void initState() {
-    FirebaseMessaging.onMessageOpenedApp.listen((event) {
-    });
+    FirebaseMessaging.onMessageOpenedApp.listen((event) {});
 
-    FirebaseMessaging.instance.getInitialMessage().then((value) {
-    });
+    FirebaseMessaging.instance.getInitialMessage().then((value) {});
 
     Notify.handleToken(null);
     Notify.listenTokenChanges().listen(Notify.handleToken);
     stream = Notify.listenRemoteMessages();
     router = AppRouter();
-
+    print(FirebaseMessaging.instance.getToken());
     mainScreens = [
       const PostsScreen(),
       const DiscoverScreen(),

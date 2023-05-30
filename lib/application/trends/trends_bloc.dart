@@ -15,18 +15,6 @@ class TrendsBloc extends Bloc<TrendsEvent, TrendsState> {
 
   TrendsBloc() : super(TrendsState.initial()) {
     on<TrendsEvent>((event, emit) async {
-      // print(event);
-      // on<_Started>((event, emit) {
-      //   print("STARTED");
-      // });
-      // on<_RefreshState>(await _OnRefreshState);
-      // on<_FetchTrendingPosts>(await _OnFetchTrendingPosts);
-      // on<_FetchTrendingUsers>(await _OnFetchTrendingUsers);
-      // on<_FetchTrendingTags>(await _OnFetchTrendingTags);
-      // on<_ChangeFetchingStatus>(await _OnChangeFetching);
-      // on<_FetchNextPosts>(await _OnFetchNextPosts);
-      // on<_StateChanged>(await _OnStateChanged);
-
       await event.map(
         started: (event) async {
           await _OnStarted(event, emit);
@@ -63,6 +51,7 @@ class TrendsBloc extends Bloc<TrendsEvent, TrendsState> {
     /// get trending posts
     /// get trending users
     /// get trending tags
+    ///
     List<Post> list1 = [];
     List<User> list2 = [];
     List<TrendingTag> list3 = [];

@@ -64,6 +64,7 @@ class _StyleAvatarViewState extends State<StyleAvatarView>
                         Tab(
                           height: 70,
                           child: TrianglePolygon.regular(
+                            imageUrl: state.profilePic.imageUrl,
                             radialGradius:
                                 state.profilePic.styles.trianglePPStyle.radius,
                             colors: state
@@ -76,6 +77,7 @@ class _StyleAvatarViewState extends State<StyleAvatarView>
                         Tab(
                           height: 70,
                           child: Pentagon.regular(
+                            imageUrl: state.profilePic.imageUrl,
                             begin: state
                                 .profilePic.styles.pentagonPPStyle.beginXY
                                 .toAlignment(),
@@ -89,6 +91,7 @@ class _StyleAvatarViewState extends State<StyleAvatarView>
                         Tab(
                           height: 70,
                           child: Heptagon(
+                            imageUrl: state.profilePic.imageUrl,
                             epicenter: state
                                 .profilePic.styles.heptagonPPStyle.epicenter
                                 .toAlignment(),

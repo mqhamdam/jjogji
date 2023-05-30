@@ -28,6 +28,7 @@ Future<void> handlerBackgroundMessages(RemoteMessage message) async {
 }
 
 Future<void> _handleForegroundMessages(RemoteMessage message) async {
+  print("NOT");
   final title = message.notification!.title;
   final body = message.notification!.body;
   Vibration.vibrate(duration: 250);
