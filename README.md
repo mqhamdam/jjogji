@@ -62,6 +62,12 @@ Overall, the "Jjogji" platform provides a user-friendly interface for individual
 	 - BLoC (State Management)
 	 - freezed (Sealed/immutable/union classes)
 	 - dartz (Functional Programming)
+
+### App Architecture
+![App Architecture](https://github.com/mqhamdam/jjogji/blob/main/README_ASSETS/app_architecture.png?raw=true "App Architecture")
+---
+#### MongoDB Schema Model
+![MongoDB Schema](https://github.com/mqhamdam/jjogji/blob/main/README_ASSETS/mongodb_schema.png?raw=true "MongoDB Schema")
 ---
 
 ## Backend Architecture
